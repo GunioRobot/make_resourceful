@@ -30,7 +30,7 @@ describe Resourceful::Default::Actions, " show action" do
   end
 
   after(:each) { @controller.show }
-  
+
   it "should load the instance object" do
     @controller.expects(:load_object)
   end

@@ -70,11 +70,11 @@ class RedirectTo
       return %Q{expected redirect to #{@expected.inspect}, got no redirect}
     end
   end
-  
+
   def negative_failure_message
     return %Q{expected not to be redirected to #{@expected.inspect}, but was} if @redirected
   end
-  
+
   def description
     "redirect to #{@actual.inspect}"
   end

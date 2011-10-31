@@ -65,7 +65,7 @@ describe Resourceful::Maker, "when made_resourceful with an inherited controller
     mock_kontroller
     mock_builder :inherited
   end
-  
+
   it "should include Resourceful::Base" do
     @kontroller.expects(:include).with(Resourceful::Base)
     @kontroller.make_resourceful {}

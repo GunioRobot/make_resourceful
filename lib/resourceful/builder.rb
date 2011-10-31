@@ -61,7 +61,7 @@ module Resourceful
     # :call-seq:
     #   actions(*available_actions)
     #   actions :all
-    # 
+    #
     # Adds the default RESTful actions to the controller.
     #
     # If the only argument is <tt>:all</tt>,
@@ -184,7 +184,7 @@ module Resourceful
     #   end
     #
     # This is the same as
-    #     
+    #
     #   response_for :new do |format|
     #     format.html { render :action => 'edit' }
     #   end
@@ -231,8 +231,8 @@ module Resourceful
     #
     # Then GET /posts/12.yaml would render
     #
-    #   --- 
-    #   post: 
+    #   ---
+    #   post:
     #     title: Cool Stuff
     #     rendered_content: |-
     #       <p>This is a post.</p>
@@ -285,7 +285,7 @@ module Resourceful
         :only => [:show, :index]
       }.merge(Hash === formats.last ? formats.pop : {})
       raise "Must specify :attributes option" unless options[:attributes]
-      
+
       Array(options.delete(:only)).each do |action|
         @publish[action] ||= []
         formats.each do |format|
@@ -318,7 +318,7 @@ module Resourceful
     def belongs_to(*parents)
       @parents = parents.map(&:to_s)
     end
-    
+
     # This method is only meant to be called internally.
     #
     # Returns whether or not the Builder's controller
@@ -328,7 +328,7 @@ module Resourceful
     end
 
     private
-    
+
     def apply_publish
       @publish.each do |action, types|
         @responses[action.to_sym] ||= []

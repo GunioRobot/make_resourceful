@@ -93,7 +93,7 @@ module ControllerMocks
     @builder = Resourceful::Builder.new(@kontroller)
     class << @builder
       alias_method :made_resourceful, :instance_eval
-    end    
+    end
   end
 
   def responses
@@ -175,7 +175,7 @@ module RailsMocks
     route_block = options[:routes] || proc { |map| map.resources options[:name] }
     ActionController::Routing::Routes.draw(&route_block)
   end
-  
+
   def init_controller(options)
     @controller = kontroller.new
     @request = ActionController::TestRequest.new

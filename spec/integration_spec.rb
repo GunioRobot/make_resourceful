@@ -58,7 +58,7 @@ describe "ThingsController", "with all the resourceful actions", :type => :integ
     Thing.stubs(:find).returns(@object)
     get :show, :id => 12
     assigns(:thing).should == @object
-  end  
+  end
 
   ## Specs for #edit
 
@@ -184,7 +184,7 @@ describe "ThingsController", "with all the resourceful actions", :type => :integ
     Thing.stubs(:find).returns(@object)
     put :update, :id => 12
     assigns(:thing).should == @object
-  end  
+  end
 
   it "should update the new object for PUT /things/12" do
     Thing.stubs(:find).returns(@object)
@@ -243,7 +243,7 @@ describe "ThingsController", "with all the resourceful actions", :type => :integ
     Thing.stubs(:find).returns(@object)
     delete :destroy, :id => 12
     assigns(:thing).should == @object
-  end  
+  end
 
   it "should destroy the new object for DELETE /things/12" do
     Thing.stubs(:find).returns(@object)

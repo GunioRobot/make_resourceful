@@ -4,7 +4,7 @@ module Resourceful
       # Sets the default flash message.
       # This message can be overridden by passing in
       # an HTTP parameter of the form "_flash[type]" via POST or GET.
-      # _flash HTTP parameter values will be HTML escaped prior to 
+      # _flash HTTP parameter values will be HTML escaped prior to
       # being used.
       #
       # You can use this to easily have multiple forms
@@ -19,8 +19,8 @@ module Resourceful
       # TODO: Move this out of here
       #++
       def set_default_flash(type, message)
-        flash[type] ||= (params[:_flash] && params[:_flash][type]) ? 
-          ERB::Util.h(params[:_flash][type]) : 
+        flash[type] ||= (params[:_flash] && params[:_flash][type]) ?
+          ERB::Util.h(params[:_flash][type]) :
           message
       end
 
@@ -75,7 +75,7 @@ module Resourceful
             end
             format.js
           end
-          
+
           response_for(:create_fails) do |format|
             format.html do
               set_default_flash :error, "There was a problem!"
@@ -83,7 +83,7 @@ module Resourceful
             end
             format.js
           end
-        
+
           response_for(:update) do |format|
             format.html do
               set_default_flash :notice, "Save successful!"
@@ -91,7 +91,7 @@ module Resourceful
             end
             format.js
           end
-          
+
           response_for(:update_fails) do |format|
             format.html do
               set_default_flash :error, "There was a problem saving!"
@@ -99,7 +99,7 @@ module Resourceful
             end
             format.js
           end
-          
+
           response_for(:destroy) do |format|
             format.html do
               set_default_flash :notice, "Record deleted!"
@@ -107,7 +107,7 @@ module Resourceful
             end
             format.js
           end
-          
+
           response_for(:destroy_fails) do |format|
             format.html do
               set_default_flash :error, "There was a problem deleting!"

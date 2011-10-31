@@ -191,7 +191,7 @@ describe Resourceful::Default::Accessors, "#instance_variable_name" do
     mock_controller Resourceful::Default::Accessors
     @controller.stubs(:controller_name).returns("posts")
   end
-  
+
   it "should return controller_name" do
     @controller.instance_variable_name == "posts"
   end
@@ -209,7 +209,7 @@ describe Resourceful::Default::Accessors, "#current_model for a singular control
     @controller.stubs(:parent_object).returns(@parent)
     @controller.stubs(:parent?).returns(true)
   end
-  
+
   it "should return the constant named by current_model_name" do
     @controller.current_model.should == Post
   end
@@ -224,7 +224,7 @@ describe Resourceful::Default::Accessors, "#current_model for a plural controlle
     @controller.stubs(:current_model_name).returns("Post")
     @controller.stubs(:parent?).returns(false)
   end
-  
+
   it "should return the constant named by current_model_name" do
     @controller.current_model.should == Post
   end
@@ -363,8 +363,8 @@ describe Resourceful::Default::Accessors, " for a singular controller with a par
   before :each do
     mock_controller Resourceful::Default::Accessors
     @controller.stubs(:singular?).returns(true)
-    
-    @model = stub_model('Thing')    
+
+    @model = stub_model('Thing')
     @model.send(:attr_accessor, :person_id)
     @controller.stubs(:current_model).returns(@model)
 

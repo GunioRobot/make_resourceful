@@ -6,7 +6,7 @@ describe Resourceful::Default::URLs, " for a controller with no parents or names
     mock_controller Resourceful::Default::URLs
     @object = stub_model('Thing')
     @controller.stubs(:current_object).returns(@object)
-    
+
     @controller.stubs(:current_model_name).returns('Thing')
     @controller.stubs(:parent?).returns(false)
     @controller.stubs(:namespaces).returns([])
@@ -113,7 +113,7 @@ describe Resourceful::Default::URLs, " for a controller with a parent object" do
     mock_controller Resourceful::Default::URLs
     @object = stub_model('Thing')
     @controller.stubs(:current_object).returns(@object)
-    
+
     @controller.stubs(:current_model_name).returns('Thing')
 
     @person = stub_model('Person')
@@ -202,7 +202,7 @@ describe Resourceful::Default::URLs, " for a controller within a namespace" do
     mock_controller Resourceful::Default::URLs
     @object = stub_model('Thing')
     @controller.stubs(:current_object).returns(@object)
-    
+
     @controller.stubs(:current_model_name).returns('Thing')
 
     @controller.stubs(:parent?).returns(false)
@@ -240,7 +240,7 @@ describe Resourceful::Default::URLs, " for a controller with a parent object and
     mock_controller Resourceful::Default::URLs
     @object = stub_model('Thing')
     @controller.stubs(:current_object).returns(@object)
-    
+
     @controller.stubs(:current_model_name).returns('Thing')
 
     @person = stub_model('Person')

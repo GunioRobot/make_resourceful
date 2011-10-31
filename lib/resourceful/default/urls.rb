@@ -11,7 +11,7 @@ module Resourceful
       #
       #   object_path    #=> "/hats/12"
       #   hat_path(@hat) #=> "/hats/12"
-      # 
+      #
       def object_path(object = current_object); object_route(object, 'path'); end
       # Same as object_path, but with the protocol and hostname.
       def object_url (object = current_object); object_route(object, 'url');  end
@@ -24,7 +24,7 @@ module Resourceful
       #
       #   nested_object_path             #=> "/person/42/hats/12"
       #   person_hat_path(@person, @hat) #=> "/person/42/hats/12"
-      # 
+      #
       def nested_object_path(object = current_object); nested_object_route(object, 'path'); end
       # Same as nested_object_path, but with the protocol and hostname.
       def nested_object_url (object = current_object); nested_object_route(object, 'url');  end
@@ -35,7 +35,7 @@ module Resourceful
       #
       #   edit_object_path                    #=> "/hats/12/edit"
       #   edit_person_hat_path(@person, @hat) #=> "/hats/12/edit"
-      # 
+      #
       def edit_object_path(object = current_object); edit_object_route(object, 'path'); end
       # Same as edit_object_path, but with the protocol and hostname.
       def edit_object_url (object = current_object); edit_object_route(object, 'url');  end
@@ -46,7 +46,7 @@ module Resourceful
       #
       #   objects_path              #=> "/people/42/hats"
       #   person_hats_path(@person) #=> "/people/42/hats"
-      # 
+      #
       def objects_path; objects_route('path'); end
       # Same as objects_path, but with the protocol and hostname.
       def objects_url ; objects_route('url');  end
@@ -57,13 +57,13 @@ module Resourceful
       #
       #   new_object_path              #=> "/people/42/hats/new"
       #   new_person_hat_path(@person) #=> "/people/42/hats/new"
-      # 
+      #
       def new_object_path; new_object_route('path'); end
       # Same as new_object_path, but with the protocol and hostname.
       def new_object_url ; new_object_route('url');  end
 
       # This returns the path for the parent object.
-      # 
+      #
       def parent_path(object = parent_object)
         instance_route(parent_name, object, 'path')
       end

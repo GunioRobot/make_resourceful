@@ -168,7 +168,7 @@ describe Resourceful::Builder, " with a response set for the default format" do
     @builder.response_for('index', &should_be_called)
     @builder.apply
   end
-  
+
   it "should save the response as a response for HTML in the :resourceful_responses inheritable_attribute" do
     responses[:index].map(&:first).should == [:html]
     responses[:index].map(&:last).each(&:call)
@@ -268,7 +268,7 @@ describe Resourceful::Builder, " publishing only to #show" do
   it "shouldn't pass the :only option to the serialize call" do
     @model.expects(:serialize).with(:yaml, :attributes => [:name, :stuff])
     @kontroller.stubs(:render)
-    @kontroller.instance_eval(&responses[:show].find { |type, _| type == :yaml }[1])    
+    @kontroller.instance_eval(&responses[:show].find { |type, _| type == :yaml }[1])
   end
 end
 

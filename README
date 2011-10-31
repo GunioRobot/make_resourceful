@@ -15,7 +15,7 @@ So make_resourceful can be massively customized,
 while still keeping your controllers trim and readable.
 
 == Get it!
- 
+
 Rails
 
   $ ruby script/plugin install http://svn.hamptoncatlin.com/make_resourceful/trunk

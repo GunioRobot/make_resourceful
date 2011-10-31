@@ -72,7 +72,7 @@ module Resourceful
   #       </candy>
   #     </candies>
   #   </candy-bag>
-  # 
+  #
   module Serialize
 
     # Takes an attributes option in the form passed to Builder#publish
@@ -85,7 +85,7 @@ module Resourceful
     #
     #   Resourceful::Serialize.normalize_attributes([:foo, :bar, {"baz" => ["boom"]}])
     #     #=> {"baz"=>["boom"], :foo=>nil, :bar=>nil}
-    # 
+    #
     def self.normalize_attributes(attributes) # :nodoc:
       return nil if attributes.nil?
       return {attributes.to_sym => nil} if String === attributes
@@ -149,7 +149,7 @@ module Resourceful
       # :call-seq:
       #   serialize format, options = {}, :attributes => [ ... ]
       #
-      # See the module documentation for Serialize for details.      
+      # See the module documentation for Serialize for details.
       def serialize(format, options)
         raise "Not all elements respond to to_serializable" unless all? { |e| e.respond_to? :to_serializable }
         raise "Must specify :attributes option" unless options[:attributes]
